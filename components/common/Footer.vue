@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="fixed bottom-0 left-0 w-full flex justify-between">
     <div class="icon-container">
       <NuxtLink><Icon name="uil:linkedin" width="30" height="30"/></NuxtLink>
       <NuxtLink><Icon name="uil:facebook" width="30" height="30"/></NuxtLink>

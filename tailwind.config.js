@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -9,7 +12,12 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        comfortaa: ["Comfortaa", "sans-serif"],
+        sans: ["Comfortaa", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 };
