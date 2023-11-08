@@ -4,7 +4,7 @@ import { Feature, Gallery, Home } from "#components";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
-const slides = ref([
+const slides = markRaw([
   { id: 1, component: Home },
   { id: 2, component: Feature },
   { id: 3, component: Gallery },
@@ -27,12 +27,8 @@ const slides = ref([
       disableOnInteraction: true,
     }"
   >
-    <SwiperSlide
-      v-for="(slide, idx) in slides"
-      :key="idx"
-      class="bg-fixed bg-cover bg-[url('assets/images/bg.png')]"
-    >
-      <component :is="slide.component"> </component>
+    <SwiperSlide v-for="(slide, idx) in slides" :key="idx">
+      <component :is="slide.component" />
     </SwiperSlide>
 
     <!-- useSwiper() within a swiper instance -->
