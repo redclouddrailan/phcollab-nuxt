@@ -1,6 +1,6 @@
 <script setup>
 import { Pagination, EffectFade, Mousewheel } from "swiper/modules";
-import { Feature, Gallery, Home } from "#components";
+import { Feature, Gallery, Home, Footer } from "#components";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
@@ -34,18 +34,7 @@ const slides = ref([
       class="bg-fixed bg-cover bg-[url('assets/images/bg.png')]"
     >
       <component :is="slide.component"></component>
-      <footer>
-        <div class="icon-container">
-          <NuxtLink><Icon name="uil:linkedin" width="30" height="30"/></NuxtLink>
-          <NuxtLink><Icon name="uil:facebook" width="30" height="30"/></NuxtLink>
-          <NuxtLink><Icon name="uil:twitter" width="30" height="30"/></NuxtLink>
-          <NuxtLink><Icon name="uil:instagram" width="30" height="30"/></NuxtLink>
-        </div>
-        <div class="copy-right">
-         
-          <p>All rights reserved |  phCollab | 2023</p>
-        </div>      
-      </footer>
+      <Footer></Footer>
     </SwiperSlide>
 
     <!-- useSwiper() within a swiper instance -->
