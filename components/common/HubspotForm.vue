@@ -17,5 +17,9 @@ export default {
 };
 </script>
 <template>
+  <p class="text-purple-950 text-center font-bold text-3xl mb-8">
+    Speak with Us!
+  </p>
   <div id="hubspotForm" v-once></div>
+
 </template>
